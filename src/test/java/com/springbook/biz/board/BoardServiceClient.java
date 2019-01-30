@@ -1,9 +1,11 @@
 package com.springbook.biz.board;
 
-import java.util.List;
+import java.util.List; 
 
 import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;;
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.stereotype.Service;;
+
 
 public class BoardServiceClient {
 	
