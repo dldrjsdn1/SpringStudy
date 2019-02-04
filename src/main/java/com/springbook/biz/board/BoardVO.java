@@ -10,6 +10,7 @@ public class BoardVO {
 	private String content;
 	private Date regDate;
 	private int cnt;
+
 	
 	public int getSeq() {
 		return seq;
@@ -47,6 +48,7 @@ public class BoardVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
+	
 	@Override
 	public String toString() {
 		return "BoardVO [seq=" + seq + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regDate="
