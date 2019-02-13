@@ -58,5 +58,20 @@
 	</aop:config>
 	
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:sql-map-config.xml"></property>
+	</bean>
+	
+	<!-- Mybatis 와 Spring 연동 설정 -->
+	<bean id="sqlsession" class="org.mybatis.spring.SqlSessionFactoryBean" >
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:sql-map-config.xml"></property>
+	</bean>
+	<bean class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlsession"></constructor-arg>
+	</bean>
+	
 	</beans>
 
